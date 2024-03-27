@@ -1,0 +1,95 @@
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-content: center;
+  background-color: black;
+  max-height: 120px;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+}
+.headerL {
+  grid-area: header1;
+}
+.headerR {
+  grid-area: header2;
+}
+
+.confBtn {
+  background-color: darkblue;
+  font-size: 28px;
+}
+.infoBtn {
+  background-color: darkgoldenrod;
+}
+.playBtn {
+  background-color: green;
+}
+.addBtn {
+  font-size: 60px;
+}
+
+/* Sidebar */
+.sideBar {
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: sideBar;
+  background-color: darkgray;
+  border-radius: 14px;
+  margin-left: 20px;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.sideBtn {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 912px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+  /*body {*/
+  /*  grid-template-rows: 120px 120px auto 90px;*/
+  /*  grid-template-areas: 'header1 header1'*/
+  /*                           'header2 header2'*/
+  /*                           'content content'*/
+  /*                           'footer footer';*/
+  /*}*/
+  .btnCardTitle {
+    font-size: 26px;
+  }
+}
+
+@keyframes deleteBtnAnimation {
+  from {
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+  }
+  to {
+    width: 32px;
+    height: 32px;
+    font-size: 30px;
+  }
+}
+@keyframes addCardAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

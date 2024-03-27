@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  align-content: center;
+  background-color: black;
+  max-height: 120px;
+  min-height: 120px;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
+.headerL {
+  grid-area: header1;
+}
+.headerR {
+  grid-area: header2;
+}
+.headerButtonCircled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  color: #FFFFFF;
+  font-size: 64px;
+}
+.sideLogo {
+  width: 140px;
+}
+/* Titel */
+.sideTitle {
+  font-size: 52px;
+  font-weight: bold;
+}
+.stopBtn {
+  background-color: red;
+}
+.stopBtn:hover {
+  cursor: default;
+}
+.restartBtn {
+  background-color: green;
+}
+.restartBtn:hover {
+  cursor: default;
+}
+.shutdownBtn {
+  background-color: red;
+}
+.shutdownBtn {
+  cursor: default;
+}
+/* Volume Ctrl */
+.volumeCtrl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.volumeCtrlText {
+  font-size: 42px;
+  font-weight: bold;
+}
+.volumeButton {
+  font-size: 54px
+}
+.volumeButton:hover {
+  color: red;
+}
+.batterySymbol {
+  font-size: 78px;
+}
+.batteryTxt {
+  font-size: 42px;
+  font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.sideBar {
+  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: sideBar;
+  background-color: darkgray;
+  border-radius: 14px;
+  margin-left: 20px;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.sideBtn {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 10px;
+}

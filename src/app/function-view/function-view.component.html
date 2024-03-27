@@ -1,0 +1,32 @@
+<div class="btnGriddd">
+  <div class="col-10"></div>
+  <div class="col-85 btnGrid">
+    <div class="btnCard" *ngFor="let buttonCard of buttonCol1">
+      <div class="row-start">
+        <div class="col-25 material-symbols-outlined cardBtn deleteBtn"  *ngIf="editOn && buttonCard.editable" ng-click="deleteBtn(buttonCard)">do_not_disturb_on</div>
+      </div>
+      <div class="row">
+        <div class="col-5"></div>
+        <div class="col-95 btnCardTitle">{{ buttonCard.title }}</div>
+      </div>
+      <div class="row-end" style="margin-top: 5px;">
+        <div class="col-5" *ngIf="buttonCard.config"></div>
+        <div class="col-25 material-symbols-outlined cardBtn confBtn" *ngIf="buttonCard.config">settings</div>
+        <div class="col-5"></div>
+        <div class="col-25 material-symbols-outlined cardBtn infoBtn">help</div>
+        <div class="col-5"></div>
+        <div class="col-25 material-symbols-outlined cardBtn playBtn">play_circle</div>
+        <div class="col-5"></div>
+      </div>
+    </div>
+    <div class="btnCard addCard" *ngIf="editOn">
+      <div class="row">
+        <div class="col-40"></div>
+        <div class="col-20">
+          <div class="material-symbols-outlined addBtn">add_circle</div>
+        </div>
+        <div class="col-40"></div>
+      </div>
+    </div>
+  </div>
+</div>
