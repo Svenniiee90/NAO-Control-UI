@@ -1,28 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {HeaderComponent} from "./header/header.component";
 import {FunctionViewComponent} from "./function-view/function-view.component";
 import {SideBarComponent} from "./side-bar/side-bar.component";
 import {FooterComponent} from "./footer/footer.component";
-
-class ButtonCard {
-  title: String;
-  path: '/test/behavior_1',
-  editable: false,
-  config: true
-}
+import {ModalViewComponent} from "./modal-view/modal-view.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, HeaderComponent, FunctionViewComponent, SideBarComponent, FooterComponent],
+  imports: [RouterOutlet, NgForOf, HeaderComponent, FunctionViewComponent, SideBarComponent, FooterComponent, ModalViewComponent, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'NAO-Control-UI';
   editOn = false;
+  modalOpen = true;
 
   changeEditOn() {
     if(this.editOn) {
@@ -40,7 +35,8 @@ export class AppComponent {
       title: 'Begrüssung',
       path: '/test/behavior_1',
       editable: false,
-      config: true
+      config: true,
+      col: 2
     },
     {
       title: 'ChatGPT fragen',
@@ -65,7 +61,10 @@ export class AppComponent {
     }
   ];
 
-  deleteBtn(btnCard: ButtonCard) {
-
+  closeModal() {
+    this.modalOpen = false;
+  }
+  openModal() {
+    this.modalOpen = true;
   }
 }

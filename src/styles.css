@@ -40,7 +40,7 @@ body {
 .col-85 {width: 85%;}
 .col-90 {width: 90%;}
 .col-95 {width: 90%;}
-.col-100 {width: 100%;border: 1px solid red;}
+.col-100 {width: 100%;}
 
 * {
   box-sizing: border-box;

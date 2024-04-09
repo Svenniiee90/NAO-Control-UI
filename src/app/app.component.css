@@ -61,13 +61,7 @@
   .grid-container {
     grid-template-columns: auto auto;
   }
-  /*body {*/
-  /*  grid-template-rows: 120px 120px auto 90px;*/
-  /*  grid-template-areas: 'header1 header1'*/
-  /*                           'header2 header2'*/
-  /*                           'content content'*/
-  /*                           'footer footer';*/
-  /*}*/
+
   .btnCardTitle {
     font-size: 26px;
   }

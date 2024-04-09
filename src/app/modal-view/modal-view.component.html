@@ -1,0 +1,38 @@
+<div (click)="close()" class="overlay"></div>
+<div class="modalWindow">
+  <div class="modalContent">
+    <div class="col-100">
+      <div class="modalTitle">Behavior hinzufügen</div>
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-30">
+          <label>Titel:</label>
+        </div>
+        <div class="col-10"></div>
+        <div class="col-60">
+          <input type="text" class="modalInput">
+        </div>
+      </div>
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-30">
+          <label>Pfad:</label>
+        </div>
+        <div class="col-10"></div>
+        <div class="col-60">
+          <input type="text" class="modalInput">
+        </div>
+      </div>
+      <div class="row" style="margin-top: 60px;">
+        <div class="col-30">
+          <label>Beschreibung:</label>
+        </div>
+        <div class="col-10"></div>
+        <div class="col-60">
+          <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+        </div>
+      </div>
+      <div class="modalBtnBar">
+        <div class="modalBtn" *ngFor="let button of btns">{{ button.btnTitle }}</div>
+      </div>
+    </div>
+  </div>
+</div>

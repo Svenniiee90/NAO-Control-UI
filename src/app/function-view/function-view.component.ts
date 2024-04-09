@@ -1,12 +1,11 @@
-import {Component, input, Input} from '@angular/core';
-import {NgForOf, NgIf} from "@angular/common";
+import {Component, EventEmitter, input, Input, Output} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-function-view',
   standalone: true,
   imports: [
-    NgForOf,
-    NgIf
+    CommonModule
   ],
   templateUrl: './function-view.component.html',
   styleUrl: './function-view.component.css'
@@ -14,6 +13,7 @@ import {NgForOf, NgIf} from "@angular/common";
 export class FunctionViewComponent {
   @Input() editOn = false;
   @Input() buttonCards = [];
+  @Output() openModal = new EventEmitter<string>();
   buttonCol1 = [
     {
       title: 'Begrüssung',
@@ -43,8 +43,7 @@ export class FunctionViewComponent {
       col: 2
     }
   ];
-
-  deleteBtn(btnCard: ButtonCard){
-
+  addNewBehavior() {
+    this.openModal.emit()
   }
 }
