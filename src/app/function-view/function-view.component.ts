@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import {Component, input, Input} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
@@ -13,6 +13,7 @@ import {NgForOf, NgIf} from "@angular/common";
 })
 export class FunctionViewComponent {
   @Input() editOn = false;
+  @Input() buttonCards = [];
   buttonCol1 = [
     {
       title: 'Begrüssung',
@@ -42,4 +43,8 @@ export class FunctionViewComponent {
       col: 2
     }
   ];
+
+  deleteBtn(btnCard: ButtonCard){
+
+  }
 }

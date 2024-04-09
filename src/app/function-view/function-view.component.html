@@ -3,7 +3,7 @@
   <div class="col-85 btnGrid">
     <div class="btnCard" *ngFor="let buttonCard of buttonCol1">
       <div class="row-start">
-        <div class="col-25 material-symbols-outlined cardBtn deleteBtn"  *ngIf="editOn && buttonCard.editable" ng-click="deleteBtn(buttonCard)">do_not_disturb_on</div>
+        <div class="col-25 material-symbols-outlined cardBtn deleteBtn"  *ngIf="editOn && buttonCard.editable" (click)="deleteBtn(buttonCard)">do_not_disturb_on</div>
       </div>
       <div class="row">
         <div class="col-5"></div>

@@ -6,6 +6,13 @@ import {FunctionViewComponent} from "./function-view/function-view.component";
 import {SideBarComponent} from "./side-bar/side-bar.component";
 import {FooterComponent} from "./footer/footer.component";
 
+class ButtonCard {
+  title: String;
+  path: '/test/behavior_1',
+  editable: false,
+  config: true
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -57,4 +64,8 @@ export class AppComponent {
       col: 2
     }
   ];
+
+  deleteBtn(btnCard: ButtonCard) {
+
+  }
 }

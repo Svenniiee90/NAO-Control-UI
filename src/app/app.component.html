@@ -3,7 +3,7 @@
 <div class="row-start">
   <div class="col-5"></div>
   <div class="col-80">
-    <app-function-view [editOn]="editOn"></app-function-view>
+    <app-function-view [editOn]="editOn" [buttonCards]="buttonCol1" (deleteBtn)="deleteBtn(btnCard)"></app-function-view>
   </div>
   <div class="col-10">
     <app-side-bar (changeEdit)="changeEditOn()"></app-side-bar>
