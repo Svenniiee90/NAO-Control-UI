@@ -27,11 +27,13 @@
         </div>
         <div class="col-10"></div>
         <div class="col-60">
-          <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+          <textarea id="w3review" name="w3review" rows="3" cols="50"></textarea>
         </div>
       </div>
       <div class="modalBtnBar">
-        <div class="modalBtn" *ngFor="let button of btns">{{ button.btnTitle }}</div>
+        <div class="modalBtn" *ngFor="let button of btns">
+          <div (click)="button.function()">{{ button.btnTitle }}</div>
+        </div>
       </div>
     </div>
   </div>

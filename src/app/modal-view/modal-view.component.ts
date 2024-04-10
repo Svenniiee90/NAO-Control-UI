@@ -2,8 +2,9 @@ import {Component, EventEmitter, Output} from '@angular/core';
 import {NgForOf} from "@angular/common";
 
 function back() {
-
+  alert("bakc")
 }
+
 
 @Component({
   selector: 'app-modal-view',
@@ -19,15 +20,15 @@ export class ModalViewComponent {
   btns =  [
     {
       btnTitle: "Zurück",
-      function: back()
+      function: () => {this.closeModal.emit();}
     },
     {
       btnTitle: "Speichern",
-      function: back()
+      function: back
     },
     {
       btnTitle: "Weiter",
-      function: back()
+      function: back
     }
   ];
 
