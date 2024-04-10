@@ -11,4 +11,5 @@
   <div class="col-5"></div>
 </div>
 <app-modal-view *ngIf="modalOpen" (closeModal)="closeModal()"></app-modal-view>
+<app-connect-screen *ngIf="!connected"></app-connect-screen>
 <app-footer></app-footer>

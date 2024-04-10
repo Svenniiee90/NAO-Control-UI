@@ -6,18 +6,20 @@ import {FunctionViewComponent} from "./function-view/function-view.component";
 import {SideBarComponent} from "./side-bar/side-bar.component";
 import {FooterComponent} from "./footer/footer.component";
 import {ModalViewComponent} from "./modal-view/modal-view.component";
+import {ConnectScreenComponent} from "./connect-screen/connect-screen.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgForOf, HeaderComponent, FunctionViewComponent, SideBarComponent, FooterComponent, ModalViewComponent, NgIf],
+  imports: [RouterOutlet, NgForOf, HeaderComponent, FunctionViewComponent, SideBarComponent, FooterComponent, ModalViewComponent, NgIf, ConnectScreenComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'NAO-Control-UI';
   editOn = false;
-  modalOpen = true;
+  modalOpen = false;
+  connected = false;
 
   changeEditOn() {
     if(this.editOn) {
@@ -60,6 +62,7 @@ export class AppComponent {
       col: 2
     }
   ];
+
 
   closeModal() {
     this.modalOpen = false;
