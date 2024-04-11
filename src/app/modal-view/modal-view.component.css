@@ -20,7 +20,7 @@
   transform-origin: left;
   border: rgb(227, 227, 227) 1px solid;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 9px;
   overflow: auto;
   z-index: 2;
   animation-name: showModalAnimation;
@@ -32,8 +32,8 @@
   font-weight: bold;
 }
 .modalContent {
-  font-family: "Arial Narrow";
-  /*font-family: Bahnschrift;*/
+  /*font-family: "Arial Narrow";*/
+  font-family: Bahnschrift;
   padding: 35px;
   display: flex;
   align-items: center;

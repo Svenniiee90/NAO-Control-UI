@@ -10,7 +10,7 @@
 .loadScreen {
   position: absolute;
   top: 24%;
-  left: 40%;
+  left: 36%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +26,11 @@
   animation-duration: 1500ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+.reloadBtn {
+  color: red;
+  font-size: 22px;
+
 }
 @keyframes spinReload {
   from {

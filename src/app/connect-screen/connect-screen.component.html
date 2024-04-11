@@ -1,5 +1,6 @@
 <div class="overlay"></div>
 <div class="loadScreen">
-  <p>Verbinde mit NAO...</p>
+  <p>{{ msg }}</p>
   <span class="material-symbols-outlined reloadIcon">refresh</span>
+  <div (click)="reconnect.emit()" class="reloadBtn">{{ btnTitle }}</div>
 </div>

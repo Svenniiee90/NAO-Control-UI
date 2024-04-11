@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-connect-screen',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './connect-screen.component.css'
 })
 export class ConnectScreenComponent {
-
+  @Output() reconnect = new EventEmitter<string>();
+  msg = 'Verbindung mit NAO herstellen...'
+  btnTitle = 'nochmal versuchen'
 }

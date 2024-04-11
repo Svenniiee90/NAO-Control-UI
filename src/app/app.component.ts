@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgForOf, NgIf} from "@angular/common";
 import {HeaderComponent} from "./header/header.component";
@@ -7,6 +7,7 @@ import {SideBarComponent} from "./side-bar/side-bar.component";
 import {FooterComponent} from "./footer/footer.component";
 import {ModalViewComponent} from "./modal-view/modal-view.component";
 import {ConnectScreenComponent} from "./connect-screen/connect-screen.component";
+import {interval, take, timeout} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -15,12 +16,19 @@ import {ConnectScreenComponent} from "./connect-screen/connect-screen.component"
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'NAO-Control-UI';
   editOn = false;
   modalOpen = false;
   connected = false;
+  connectionTimeout = false;
+  ngOnInit(): void {
+    const subscription = interval(500)
+      .pipe()
+      .subscribe(x => console.log('Next: ', x));
+    setTimeout(()=> {subscription.unsubscribe();}, 12350)
 
+  }
   changeEditOn() {
     if(this.editOn) {
       this.editOn = false;
@@ -62,6 +70,7 @@ export class AppComponent {
       col: 2
     }
   ];
+  private numbers: any;
 
 
   closeModal() {
@@ -70,4 +79,11 @@ export class AppComponent {
   openModal() {
     this.modalOpen = true;
   }
+
+  reconnect() {
+    this.connected = true;
+    alert("connected")
+  }
+
+
 }

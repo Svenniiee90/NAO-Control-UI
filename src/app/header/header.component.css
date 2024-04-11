@@ -75,3 +75,18 @@
   font-size: 42px;
   font-weight: bold;
 }
+.batteryLow {
+  animation-name: blinkBattery;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes blinkBattery {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+}
